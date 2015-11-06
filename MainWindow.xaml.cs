@@ -119,5 +119,21 @@ namespace Ejercicio01
                             select s;
             dbgrid.ItemsSource = registros.ToList();
         }
+
+        private void Button_Click_6(object sender, RoutedEventArgs e)
+        {
+            if (Regex.IsMatch(txtNombre.Text, @"^[a-zA-Z]+$"))
+            {
+                    //1.- Instanciar la "Base de Datos"
+                    demoEF db = new demoEF();
+                    //2.- Instanciar "Tabla Departamento"
+                    Departamento dep = new Departamento();
+                    dep.Nombre = txtDep.Text;
+                    //agregar los datos capturados
+                    db.Departamentos.Add(dep);
+                    db.SaveChanges();
+            }
+            else { MessageBox.Show("Solo letras #Nombre Departamento"); }   
+        }
     }
 }

@@ -39,6 +39,7 @@ namespace Ejercicio01
                     Empleado emp = new Empleado();
                     emp.Nombre = txtNombre.Text;
                     emp.Sueldo = int.Parse(txtSueldo.Text);
+                    
                     //agregar los datos capturados
                     db.Empleados.Add(emp);
                     db.SaveChanges();
@@ -122,7 +123,7 @@ namespace Ejercicio01
 
         private void Button_Click_6(object sender, RoutedEventArgs e)
         {
-            if (Regex.IsMatch(txtNombre.Text, @"^[a-zA-Z]+$"))
+            if (Regex.IsMatch(txtDep.Text, @"^[a-zA-Z]+$"))
             {
                     //1.- Instanciar la "Base de Datos"
                     demoEF db = new demoEF();

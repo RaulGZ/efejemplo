@@ -16,3 +16,5 @@ C:\Users\alumno15\Desktop\ClasesBD_RGZ\Ejercicio01\Ejercicio01\obj\Debug\Ejercic
 C:\Users\alumno15\Desktop\ClasesBD_RGZ\Ejercicio01\Ejercicio01\obj\Debug\Ejercicio01.exe
 C:\Users\alumno15\Desktop\ClasesBD_RGZ\Ejercicio01\Ejercicio01\obj\Debug\Ejercicio01.pdb
 C:\Users\alumno15\Desktop\ClasesBD_RGZ\Ejercicio01\Ejercicio01\obj\Debug\Ejercicio01.Migrations.Empleado.resources
+C:\Users\alumno15\Desktop\ClasesBD_RGZ\Ejercicio01\Ejercicio01\obj\Debug\Ejercicio01.Migrations.deps.resources
+C:\Users\alumno15\Desktop\ClasesBD_RGZ\Ejercicio01\Ejercicio01\obj\Debug\Ejercicio01.Migrations.Correcciondep.resources

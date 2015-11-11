@@ -11,5 +11,6 @@ namespace Ejercicio01.mibd
     {
         public DbSet<Empleado> Empleados { get; set; }
         //para crear la base de datos, DbSet es la palabra reservada
+        public DbSet<Departamento> Departamentos { get; set; }
     }
 }

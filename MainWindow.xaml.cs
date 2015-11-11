@@ -39,6 +39,7 @@ namespace Ejercicio01
                     Empleado emp = new Empleado();
                     emp.Nombre = txtNombre.Text;
                     emp.Sueldo = int.Parse(txtSueldo.Text);
+                    emp.DepartamentoId = (int)CbDepartamento.SelectedValue;
                     //agregar los datos capturados
                     db.Empleados.Add(emp);
                     db.SaveChanges();
@@ -118,6 +119,30 @@ namespace Ejercicio01
             var registros = from s in db.Empleados
                             select s;
             dbgrid.ItemsSource = registros.ToList();
+        }
+
+        private void Button_Click_6(object sender, RoutedEventArgs e)
+        {
+            if (Regex.IsMatch(txtDep.Text, @"^[a-zA-Z]+$"))
+            {
+                    //1.- Instanciar la "Base de Datos"
+                    demoEF db = new demoEF();
+                    //2.- Instanciar "Tabla Departamento"
+                    Departamento dep = new Departamento();
+                    dep.Nombre = txtDep.Text;
+                    //agregar los datos capturados
+                    db.Departamentos.Add(dep);
+                    db.SaveChanges();
+            }
+            else { MessageBox.Show("Solo letras #Nombre Departamento"); }   
+        }
+
+        private void Grid_Loaded_1(object sender, RoutedEventArgs e)
+        {
+            demoEF db = new demoEF();
+            CbDepartamento.ItemsSource = db.Departamentos.ToList();
+            CbDepartamento.DisplayMemberPath = "Nombre";
+            CbDepartamento.SelectedValuePath = "id";
         }
     }
 }

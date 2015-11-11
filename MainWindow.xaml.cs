@@ -39,7 +39,7 @@ namespace Ejercicio01
                     Empleado emp = new Empleado();
                     emp.Nombre = txtNombre.Text;
                     emp.Sueldo = int.Parse(txtSueldo.Text);
-                    
+                    emp.DepartamentoId = (int)CbDepartamento.SelectedValue;
                     //agregar los datos capturados
                     db.Empleados.Add(emp);
                     db.SaveChanges();
